@@ -168,6 +168,6 @@ td {
 @media screen and (min-width: 888px) {
   main {
     max-width: 46rem;
-    margin: 18rem auto;
+    margin: 8rem auto;
   }
 }
