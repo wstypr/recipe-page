@@ -25,11 +25,9 @@
   --brown-800: hsl(14, 45%, 36%);
 }
 
-body {
+* {
+  padding: 0;
   margin: 0;
-}
-
-main {
   box-sizing: border-box;
 }
 
@@ -39,145 +37,141 @@ img {
 }
 
 .mobile-container {
-  padding: 0 2rem 2.5rem 2rem;
+  margin: 2.5rem 2rem;
 }
 
-h1 {
-  margin: 2.5rem 0 1.5rem 0;
-  font-family: "Young Serif", Times, serif;
+.title {
+  font-family: "Young Serif", serif;
   font-size: 2.25rem;
   font-weight: 400;
   line-height: 100%;
+  letter-spacing: 0;
+  margin-bottom: 1.5rem;
   color: var(--stone-900);
 }
 
-p {
-  margin: 0;
-  font-family: Outfit, Arial, Helvetica, sans-serif;
+.intro {
+  font-family: Outfit, serif;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 150%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
+  margin-bottom: 2rem;
   color: var(--stone-600);
 }
 
 #preparation {
   padding: 1.5rem;
-  margin-top: 1.5rem;
   margin-bottom: 2rem;
   background-color: var(--rose-50);
 }
 
 #preparation h3 {
-  margin: 0;
-  margin-bottom: 1rem;
-  font-family: Outfit, Arial, Helvetica, sans-serif;
+  font-family: Outfit, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
+  line-height: 100%;
   color: var(--rose-800);
+  margin-bottom: 1rem;
 }
 
-ul,
+
+
 ol {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin: 0;
   padding-left: 1.5rem;
 }
 
+ul li{
+  padding-left: .5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+ul li::before{
+  content: "";
+  width: .25rem;
+  height: .25rem;
+  border-radius: 50%;
+  background: var(--brown-800);
+}
+
 li {
-  font-family: Outfit, Arial, Helvetica, sans-serif;
+  font-family: Outfit, sans-serif;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 150%;
+  letter-spacing: 0;
   color: var(--stone-600);
+}
+ol li{
   padding-left: 1rem;
 }
 
-li em {
-  font-weight: bold;
-  font-style: normal;
+li:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
-section {
-  margin-bottom: 2rem;
+li em {
+  font-style: normal;
+  font-weight: bold;
 }
 
 section h2 {
-  margin: 0;
-  margin-bottom: 1.5rem;
-  font-family: "Young Serif", Times, serif;
+  font-family: "Young Serif", serif;
   font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0;
   color: var(--brown-800);
+  margin-bottom: 1.5rem;
 }
 
-#nutrition {
-  margin: 0;
-}
-
-hr {
-  border-top: 1px solid var(--stone-150);
+.content:not(:last-of-type) {
+  padding-bottom: 2rem;
   margin-bottom: 2rem;
-}
-
-table {
-  width: 100%;
-  margin-top: 1.5rem;
-  font-family: Outfit, Arial, Helvetica, sans-serif;
-  color: var(--stone-600);
-  font-size: 1rem;
-  border-collapse: collapse;
-}
-
-tr:not(:last-child) {
   border-bottom: 1px solid var(--stone-150);
 }
 
-th {
-  padding-left: 2rem;
-  text-align: start;
+#nutrition p {
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
   font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0;
+  color: var(--stone-600);
 }
 
-td {
-  padding-right: 2rem;
+#nutrition-table {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+  font-family: Outfit, sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  color: var(--stone-600);
+}
+
+#nutrition-table th {
+  font-weight: 400;
+}
+#nutrition-table td {
   font-weight: bold;
   color: var(--brown-800);
 }
-
-th,
-td {
-  line-height: 150%;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+#nutrition-table th,
+#nutrition-table td {
+  text-align: start;
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid var(--stone-150);
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    background-color: var(--stone-100);
-  }
-
-  main {
-    margin: 8rem 4.75rem;
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-    background-color: white;
-  }
-
-  img {
-    height: 300px;
-    border-radius: 0.75rem;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .mobile-container {
-    padding: 0;
-  }
+#nutrition-table tr:first-child th,
+#nutrition-table tr:first-child td {
+  padding-top: 0;
 }
-
-@media screen and (min-width: 888px) {
-  main {
-    max-width: 46rem;
-    margin: 8rem auto;
-  }
+#nutrition-table tr:last-child th,
+#nutrition-table tr:last-child td {
+  padding-bottom: 0;
+  border-bottom: none;
 }
