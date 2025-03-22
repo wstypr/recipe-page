@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-900: hsl(14, 45%, 36%);
+  --brown-800: hsl(14, 45%, 36%);
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.mobile-container {
+  padding: 0 2rem 2.5rem 2rem;
+}
+
+h1 {
+  margin: 1.5rem 0;
+  font-family: "Young Serif", Times, serif;
+  font-size: 2.25rem;
+  line-height: 100%;
+  color: var(--stone-900);
+}
+
+p {
+  margin: 0;
+  font-family: Outfit, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: var(--stone-600);
+}
+
+#preparation {
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: var(--rose-50);
+}
+
+#preparation h3 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-family: Outfit, Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--rose-800);
+}
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  font-family: Outfit, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  color: var(--stone-600);
+  padding-left: 1rem;
+}
+
+li em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  font-family: "Young Serif", Times, serif;
+  font-size: 1.75rem;
+  color: var(--brown-800);
+}
+
+#nutrition {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  margin-top: 1.5rem;
+  font-family: Outfit, Arial, Helvetica, sans-serif;
+  color: var(--stone-600);
+  font-size: 1rem;
+  border-collapse: collapse;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+th {
+  padding-left: 2rem;
+  text-align: start;
+  font-weight: 400;
+}
+
+td {
+  padding-right: 2rem;
+  font-weight: bold;
+  color: var(--brown-800);
+}
+
+th,
+td {
+  line-height: 150%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: var(--stone-100);
+  }
+
+  main {
+    margin: 8rem 4.75rem;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    background-color: white;
+  }
+
+  img {
+    height: 300px;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .mobile-container {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 888px) {
+  main {
+    max-width: 46rem;
+    margin: 18rem auto;
+  }
+}
