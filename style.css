@@ -29,6 +29,10 @@ body {
   margin: 0;
 }
 
+main {
+  box-sizing: border-box;
+}
+
 img {
   display: block;
   width: 100%;
@@ -39,7 +43,7 @@ img {
 }
 
 h1 {
-  margin: 1.5rem 0;
+  margin: 2.5rem 0 1.5rem 0;
   font-family: "Young Serif", Times, serif;
   font-size: 2.25rem;
   line-height: 100%;
@@ -94,7 +98,7 @@ li em {
 }
 
 section {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 section h2 {
@@ -107,6 +111,11 @@ section h2 {
 
 #nutrition {
   margin: 0;
+}
+
+hr {
+  border-top: 1px solid var(--stone-150);
+  margin-bottom: 2rem;
 }
 
 table {
