@@ -200,6 +200,7 @@ body{
     height: 300px;
     margin-bottom: 2.5rem;
     border-radius: .75rem;
+    overflow: hidden;
   }
   
   img{
